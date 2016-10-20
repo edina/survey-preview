@@ -1,0 +1,18 @@
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<form name="form">
+			<div class="form-group">
+			    <label for="{{::$ctrl.obj.id}}"><span ng-bind="::$ctrl.obj.label"></span></label>
+			    <img class="img-responsive margin-bottom-5" ng-if="$ctrl.hasImage()" 
+					ng-src="{{$ctrl.getImageSrc()}}" />
+			    <input type="text" class="form-control"
+			    	ng-disabled="$ctrl.hasImage()"
+			    	ng-model="$ctrl.response"
+			    	ng-model-options="{ debounce: 500 }"
+			    	ng-change="$ctrl.responseChange({objResponse: {id:$ctrl.obj.id,response:$ctrl.response}})"
+			    	rows="{{::$ctrl.obj.properties.numrows}}" 
+			    	placeholder="{{::$ctrl.obj.properties.placeholder}}" />
+	  		</div>
+  		</form>
+	</div>
+</div>

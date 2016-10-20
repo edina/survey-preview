@@ -1,0 +1,55 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="text-center" ng-bind="$ctrl.editor.title"></h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<ul class="list-unstyled">
+				<li ng-repeat="field in $ctrl.editor.fields">
+					<visibility obj="field.properties.visibility" responses="$ctrl.responses">
+						<field-text ng-if="field.type === 'text'" 
+							obj="field" 
+							response-change="$ctrl.responseChange(objResponse)">
+						</field-text>
+						<field-text-area ng-if="field.type === 'textarea'" 
+							obj="field" 
+							response-change="$ctrl.responseChange(objResponse)"
+							sid="{{$ctrl.sid}}">
+						</field-text-area>
+						<field-range ng-if="field.type === 'range'" 
+							obj="field" 
+							response-change="$ctrl.responseChange(objResponse)">
+						</field-range>
+						<field-radio ng-if="field.type === 'radio'" 
+							obj="field" 
+							response-change="$ctrl.responseChange(objResponse)"
+							sid="{{$ctrl.sid}}">
+						</field-radio>
+						<field-check-box ng-if="field.type === 'checkbox'" 
+							obj="field" 
+							response-change="$ctrl.responseChange(objResponse)"
+							sid="{{$ctrl.sid}}">
+						</field-check-box>
+						<field-select ng-if="field.type === 'select'" 
+							obj="field" 
+							response-change="$ctrl.responseChange(objResponse)">
+						</field-select>
+						<field-image ng-if="field.type === 'image'" 
+							obj="field">
+						</field-image>
+						<field-audio ng-if="field.type === 'audio'" 
+							obj="field">
+						</field-audio>
+						<hr/>
+					</visibility>
+				</li>
+			</ul>
+			<div class="alert alert-danger" role="alert"
+				ng-if="$ctrl.error !== undefined" 
+				ng-bind="$ctrl.error.msg">
+			</div>
+		</div>
+	</div>
+</div>

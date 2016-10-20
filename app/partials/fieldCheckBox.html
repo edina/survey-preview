@@ -1,0 +1,27 @@
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<label ng-bind="::$ctrl.obj.label"></label>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<ul class="list-unstyled">
+			<li ng-repeat="option in $ctrl.obj.properties.options">
+				<ul class="list-inline">
+					<li>
+						<div class="check">
+							<label>
+			    				<input type="checkbox" ng-model="$ctrl.response[$index]" ng-change="$ctrl.change()">
+			    				<span ng-bind="::option.value"></span>
+	  						</label>
+  						</div>
+					</li>
+					<li>
+						<img style="width:50px;height:auto;" ng-if="$ctrl.hasImage($index)" 
+							ng-src="{{$ctrl.getImageSrc($index)}}" />
+					</li>
+  				</ul>
+			</li>
+		</li>
+	</div>
+</div>

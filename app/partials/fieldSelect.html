@@ -1,0 +1,19 @@
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<label ng-bind="::$ctrl.obj.label"></label>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<select class="form-control" 
+			ng-model="$ctrl.response"
+			ng-change="$ctrl.change()">
+		  <option 
+		  	ng-repeat="option in $ctrl.obj.properties.options" 
+		  	ng-selected="$ctrl.response === option.value"
+		  	value="{{::option.value}}">
+		  	{{::option.value}}
+		  </option>
+		</select>
+	</div>
+</div>

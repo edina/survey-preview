@@ -1,0 +1,24 @@
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<form name="form">
+			<div class="form-group">
+			    <label for="{{::$ctrl.obj.id}}"><span ng-bind="::$ctrl.obj.label"></span></label>
+			    <ul class="list-inline">
+			    	<li>
+			    		<input type="range" class="form-control" 
+					    	ng-model="$ctrl.response"
+					    	ng-model-options="{ debounce: 500 }"
+					    	ng-change="$ctrl.change()"
+					    	min="{{$ctrl.obj.properties.min}}"
+					    	max="{{$ctrl.obj.properties.max}}"
+					    	step="{{$ctrl.obj.properties.step}}"
+					    />
+			    	</li>
+			    	<li>
+			    		<output>{{$ctrl.response}}</output>
+			    	</li>
+			    </ul>
+	  		</div>
+  		</form>
+	</div>
+</div>
