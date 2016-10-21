@@ -10,6 +10,9 @@
 				this.$onInit = function(){
 					$log.debug('fieldText.$onInit: %o',self);
 				};
+				this.change = function(){
+					this.responseChange({objResponse: {id:this.obj.id,response:this.response}});
+				};
 			}],
 			bindings: {
 				'obj': '<',

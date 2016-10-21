@@ -8,7 +8,7 @@
 				    	id="{{::$ctrl.obj.id}}"
 				    	ng-model="$ctrl.response"
 				    	ng-model-options="{ debounce: 500 }"
-				    	ng-change="$ctrl.responseChange({objResponse: {id:$ctrl.obj.id,response:$ctrl.response}})" 
+				    	ng-change="$ctrl.change()" 
 				    	ng-maxlength="::$ctrl.obj.properties['max-chars']" 
 				    	placeholder="{{::$ctrl.obj.properties.placeholder}}" />
 				<p ng-show="form[$ctrl.obj.id].$invalid" class="text-danger">Max. Number of chars is <span ng-bind="::$ctrl.obj.properties['max-chars']"></span></p>

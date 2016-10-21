@@ -12,6 +12,7 @@
 
   "globals": {
     // Jasmine syntax
+    "jasmine": true,
     "describe": true,
     "beforeEach": true,
     "it": true,

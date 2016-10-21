@@ -4,7 +4,7 @@
   "description": "Preview custom forms",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "unit-test": "node_modules/gulp/bin/gulp.js unit-test",
     "http-server-start": "node_modules/http-server/bin/http-server -d false"
   },
   "keywords": [
@@ -31,6 +31,7 @@
     "jshint": "^2.9.3",
     "karma": "^1.3.0",
     "karma-jasmine": "^1.0.2",
+    "karma-junit-reporter": "^1.1.0",
     "karma-phantomjs-launcher": "^1.0.2",
     "phantomjs-prebuilt": "^2.1.13"
   }
