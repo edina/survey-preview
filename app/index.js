@@ -5,7 +5,9 @@
 	angular.module('service',[]);
 	angular.module('directive',[]);
 	angular.module('component',[]);
-	var appModule = angular.module('app',['ui.router','factory','service','directive','component']);
+	angular.module('partials',[]);
+	var appModule = angular.module('app',['ui.router','factory',
+		'service','directive','partials','component']);
 
 	appModule.config(['$logProvider','__ENV',function($logProvider,__ENV){
 		$logProvider.debugEnabled(__ENV.debug);

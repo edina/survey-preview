@@ -13,7 +13,7 @@
 	bootstrapModule.service('bootstrapService',['$q','$http',function($q,$http){
 		this.getEnv = function(){
 			var deferred = $q.defer();
-			$http({method:'GET',url:'../env.json',cache:true}).then(
+			$http({method:'GET',url:'env.json',cache:true}).then(
 				function(success){
 					deferred.resolve(success.data);
 				},

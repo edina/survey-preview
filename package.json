@@ -2,17 +2,27 @@
   "name": "survey-preview",
   "version": "0.0.1",
   "description": "Preview custom forms",
-  "main": "index.js",
+  "main": "dist/immutable.js",
   "scripts": {
+    "bundle": "node_modules/gulp/bin/gulp.js bundle",
     "unit-test": "node_modules/gulp/bin/gulp.js unit-test",
-    "http-server-start": "node_modules/http-server/bin/http-server -d false"
+    "http-server-development": "node_modules/http-server/bin/http-server ./ -d false",
+    "http-server-start": "node_modules/http-server/bin/http-server ./dist -d false"
   },
   "keywords": [
-    "fieldtrip"
+    "fieldtrip",
+    "survey",
+    "preview"
   ],
   "author": {
     "name": "Jose Lloret",
-    "email": "jollopre@gmail.com"
+    "email": "jollopre@gmail.com",
+    "url": "https://github.com/jollopre"
+  },
+  "organization": "EDINA, University of Edinburgh",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:edina/survey-preview.git"
   },
   "license": "BSD-3-Clause",
   "dependencies": {
@@ -26,6 +36,13 @@
     "angular-mocks": "^1.5.8",
     "gulp": "^3.9.1",
     "gulp-bump": "^2.4.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-header": "^1.8.8",
+    "gulp-html2js": "^0.4.2",
+    "gulp-processhtml": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
     "http-server": "^0.9.0",
     "jasmine-core": "^2.5.2",
     "jshint": "^2.9.3",
@@ -33,6 +50,7 @@
     "karma-jasmine": "^1.0.2",
     "karma-junit-reporter": "^1.1.0",
     "karma-phantomjs-launcher": "^1.0.2",
-    "phantomjs-prebuilt": "^2.1.13"
+    "phantomjs-prebuilt": "^2.1.13",
+    "run-sequence": "^1.2.2"
   }
 }

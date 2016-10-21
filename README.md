@@ -5,20 +5,26 @@ Survey-preview is a web application for previewing custom forms for [Fieldtrip-O
 ## Instalation
 
 In order to install this app, it is required nodeJS and npm running on your machine. If you meet these requirements, execute on your preferred
-command-line the following instruction:
+command-line the following instructions:
 
 ```bash
 	$npm install
+	$npm bundle
 ```
 
-The file env.json provides different properties such as the server to retrieve a survey definition, the survey owner or
+The file app/env.json provides different properties such as the server to retrieve a survey definition, the survey owner or
 the pcapi version (e.g. pcapi.baseUrl, pcapi.userId or pcapi.version respectively). If this app is located under the same server and port
 that hosts pcapi, leave pcapi.baseUrl empty. Otherwise, remember to enable CORS on that server. See [CORS](http://enable-cors.org/server.html) to
 implement CORS on a specific platform.
 
+If you make any change to app/env.json, remember to run again:
+```bash
+	$npm bundle
+```
+
 ## Run
 
-If you don't have a server to host this app, we provide a simple nodejs http server that runs the app. Execute on your command-line:
+If you don't have a server to host this app, we provide a simple nodejs http server to run the app. Execute on your command-line:
 
 ```bash
 	$npm run http-server-start
@@ -26,6 +32,10 @@ If you don't have a server to host this app, we provide a simple nodejs http ser
 
 and open on your preferred browser the following URL:
 
-[http://localhost:8080/app/index.html#/?sid=ID_OF_SURVEY](http://localhost:8080/app/index.html#/?sid=ID_OF_SURVEY)
+[http://localhost:8080/index.html#/?sid=ID_OF_SURVEY](http://localhost:8080/index.html#/?sid=ID_OF_SURVEY)
 
 Remember to replace the sid parameter value with the survey id that is hosted at your pcapi server.
+
+If you have a server to host this app, copy or reference the dist folder from this repository.
+
+
