@@ -1,3 +1,4 @@
 node_modules
 spect/unit/results
 dist
+*.DS_Store
