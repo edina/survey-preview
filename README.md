@@ -36,6 +36,6 @@ and open on your preferred browser the following URL:
 
 Remember to replace the sid parameter value with the survey id that is hosted at your pcapi server.
 
-If you have a server to host this app, copy or reference the dist folder from this repository.
+If you have a server to host this app, copy or reference the dist folder (automatically generated) from this repository.
 
 
