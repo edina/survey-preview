@@ -9,7 +9,7 @@ command-line the following instructions:
 
 ```bash
 	$npm install
-	$npm bundle
+	$npm run bundle
 ```
 
 The file app/env.json provides different properties such as the server to retrieve a survey definition, the survey owner or
