@@ -19,7 +19,7 @@ implement CORS on a specific platform.
 
 If you make any change to app/env.json, remember to run again:
 ```bash
-	$npm bundle
+	$npm run bundle
 ```
 
 ## Run
