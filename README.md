@@ -27,15 +27,13 @@ If you make any change to app/env.json, remember to run again:
 If you don't have a server to host this app, we provide a simple nodejs http server to run the app. Execute on your command-line:
 
 ```bash
-	$npm run http-server-start
+	$npm run http-server-development
 ```
 
 and open on your preferred browser the following URL:
 
-[http://localhost:8080/index.html#/?sid=ID_OF_SURVEY](http://localhost:8080/index.html#/?sid=ID_OF_SURVEY)
+[http://localhost:8080/dist/index.html#/?sid=ID_OF_SURVEY](http://localhost:8080/dist/index.html#/?sid=ID_OF_SURVEY)
 
 Remember to replace the sid parameter value with the survey id that is hosted at your pcapi server.
-
-If you have a server to host this app, copy or reference the dist folder (automatically generated) from this repository.
 
 

@@ -6,8 +6,7 @@
   "scripts": {
     "bundle": "node_modules/gulp/bin/gulp.js bundle",
     "unit-test": "node_modules/gulp/bin/gulp.js unit-test",
-    "http-server-development": "node_modules/http-server/bin/http-server ./ -d false",
-    "http-server-start": "node_modules/http-server/bin/http-server ./dist -d false"
+    "http-server-development": "node_modules/http-server/bin/http-server ./ -d false"
   },
   "keywords": [
     "fieldtrip",
