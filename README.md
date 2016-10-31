@@ -27,7 +27,7 @@ If you make any change to app/env.json, remember to run again:
 If you don't have a server to host this app, we provide a simple nodejs http server to run the app. Execute on your command-line:
 
 ```bash
-	$npm run http-server-development
+	$npm run http-server
 ```
 
 and open on your preferred browser the following URL:
