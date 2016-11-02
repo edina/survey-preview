@@ -3,6 +3,30 @@
 	var gulp = require('gulp');
 	var pkg = require('./package.json');
 
+	/**
+	* Creates or overrides a symlink
+	* @target destination path
+	* @linkpath path specified to reach @target
+	*/
+	var symlink = function(target,linkpath,callback){
+		var fs = require('fs');
+		callback = callback || function(err){
+			if(err) throw err;
+		};
+		fs.symlink(target,linkpath,'file',function(err){
+			if(err && err.code === 'EEXIST'){
+				fs.unlink(linkpath,function(err){
+					if(err)
+						callback(err);
+					else
+						symlink(target,linkpath,callback);
+				});
+			}
+			else
+				callback();
+		});
+	};
+
 	gulp.task('html2js',function(){
 		var html2js = require('gulp-html2js');
 		return gulp.src('app/partials/*.html')
@@ -85,9 +109,22 @@
 		},done).start();
 	});
 
+	gulp.task('symlink-app',function(){
+		symlink('../node_modules','./app/vendor',function(err){
+			if(err)
+				console.log(err);
+		});
+	});
+	gulp.task('symlink-dist',function(){
+		symlink('../node_modules','./dist/vendor',function(err){
+			if(err)
+				console.log(err);
+		});
+	});
 	gulp.task('bundle',function(done){
 		var runSequence = require('run-sequence');
-		runSequence('html2js','concat','uglify',['header','copy-styles','copy-json','processHtml'],
+		runSequence('html2js','concat','uglify',['header','copy-styles','copy-json',
+			'processHtml','symlink-dist'],
 			function(){
 				gulp.start('clean');
 				done();

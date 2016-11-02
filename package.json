@@ -4,6 +4,7 @@
   "description": "Preview custom forms",
   "main": "dist/immutable.js",
   "scripts": {
+    "postinstall": "node_modules/gulp/bin/gulp.js symlink-app",
     "bundle": "node_modules/gulp/bin/gulp.js bundle",
     "unit-test": "node_modules/gulp/bin/gulp.js unit-test",
     "http-server": "node_modules/http-server/bin/http-server ./ -d false"

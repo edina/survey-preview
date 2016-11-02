@@ -1,4 +1,5 @@
 node_modules
+app/vendor
 spect/unit/results
 dist
 *.DS_Store
