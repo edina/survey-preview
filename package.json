@@ -29,8 +29,7 @@
     "angular": "^1.5.8",
     "angular-ui-router": "^0.3.1",
     "bootstrap": "^3.3.7",
-    "immutable": "^3.8.1",
-    "pcapi.js": "git+https://github.com/edina/pcapi.js.git"
+    "immutable": "^3.8.1"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.8",
