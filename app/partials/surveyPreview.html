@@ -18,6 +18,11 @@
 							response-change="$ctrl.responseChange(objResponse)"
 							sid="{{$ctrl.sid}}">
 						</field-text-area>
+						<field-static-image ng-if="field.type === 'static-image'"
+							obj="field"
+							response-change="$ctrl.responseChange(objResponse)"
+							sid="{{$ctrl.sid}}">
+						</field-static-image>
 						<field-range ng-if="field.type === 'range'" 
 							obj="field" 
 							response-change="$ctrl.responseChange(objResponse)">
